@@ -1,18 +1,18 @@
-# express-resourceful
+# resourcemap
 
 Resourceful routing for Express 4.x
 
 ## Install
 
 ```
-npm install --save express-resourceful
+npm install --save resourcemap
 ```
 
 ## Example
 
 ```javascript
 var app = require('express')(),
-  map = require('express-resourceful')(app);
+  map = require('resourcemap')(app);
 
 // Example user resource
 // In real life, you probably want one resource per file

@@ -1,0 +1,28 @@
+{
+  "name": "resourcemap",
+  "version": "0.0.1",
+  "description": "Resourceful routing for Express 4.x",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/olalonde/express-resourceful.git"
+  },
+  "keywords": [
+    "express",
+    "express4",
+    "routing",
+    "router",
+    "routes",
+    "resource",
+    "resourceful"
+  ],
+  "author": "Olivier Lalonde <olalonde@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/olalonde/express-resourceful/issues"
+  },
+  "homepage": "https://github.com/olalonde/express-resourceful"
+}
