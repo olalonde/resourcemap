@@ -1,4 +1,5 @@
 var _ = require('underscore'),
+  debug = require('debug')('resourcemap'),
   inflection = require('inflection'),
   path = require('path');
 
@@ -12,18 +13,19 @@ function map (app, context) {
   }, context);
 
   function generate_routes (opts, resource, is_singleton, cb) {
-    if (typeof cb !== 'function')
-      cb = function () {};
+    if (typeof cb !== 'function') cb = function () {};
 
     if (typeof opts === 'string') {
       opts = { name: opts };
     }
 
+    debug('Generating routes for' + (is_singleton ? ' singleton' : '') + ' ' + opts.name);
+
     if (!resource)
       throw new TypeError('Error creating ' + opts.name + ' route: no resource object passed');
 
     opts = _.extend({
-      plural: is_singleton ? '' : inflection.pluralize(opts.name),
+      plural: is_singleton ? opts.name : inflection.pluralize(opts.name),
       id_param: is_singleton ? '' : ':' + opts.name
     }, opts);
 
@@ -52,10 +54,13 @@ function map (app, context) {
       if (typeof resource[route[2]] === 'function') return true;
     });
 
+
     _.each(valid_routes, function (route) {
+      debug('app.' + route[0] + '(\'' + route [1] + '\', resourceobj.' + route[2] + ')');
       app[route[0]](route[1], resource[route[2]]);
     });
 
+    // return created routes for debugging
     return valid_routes.concat(cb(map(app, {
       parent_context: context,
       basepath: join([ context.basepath, opts.plural, opts.id_param ])
