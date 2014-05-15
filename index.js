@@ -41,6 +41,7 @@ function map (app, context) {
       [ 'get',    '',     'show' ],
       [ 'get',    'edit', 'edit' ],
       [ 'put',    '',     'update' ],
+      [ 'post',   '',     'create' ],
       [ 'delete', '',     'destroy' ]
     ].map(function (row) {
       return [ row[0], [ opts.plural, opts.id_param, row[1] ], row[2] ];
