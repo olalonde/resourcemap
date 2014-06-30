@@ -53,6 +53,7 @@ function map (app, context) {
 
     var valid_routes = _.filter(routes, function (route) {
       if (typeof resource[route[2]] === 'function') return true;
+      if (_.isArray(resource[route[2]])) return true;
     });
 
 
