@@ -1,6 +1,6 @@
 {
   "name": "resourcemap",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Resourceful routing for Express 4.x",
   "main": "index.js",
   "scripts": {
