@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/olalonde/express-resourceful.git"
+    "url": "git://github.com/olalonde/resourcemap.git"
   },
   "keywords": [
     "express",
@@ -22,9 +22,9 @@
   "author": "Olivier Lalonde <olalonde@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/olalonde/express-resourceful/issues"
+    "url": "https://github.com/olalonde/resourcemap/issues"
   },
-  "homepage": "https://github.com/olalonde/express-resourceful",
+  "homepage": "https://github.com/olalonde/resourcemap",
   "dependencies": {
     "debug": "^0.8.0",
     "underscore": "^1.6.0",
